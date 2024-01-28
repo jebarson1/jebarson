@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 
-genai.configure(api_key="AIzaSyCFBDOFMu-S1-gsiz1JNozEdXjL2Rx6H0I")
+genai.configure(api_key=st.secrets["gemini_api"])
 def ai(txt):
     
     for m in genai.list_models():
@@ -15,7 +15,7 @@ def ai(txt):
 
 
 
-st.title("AI FOR BGMI GAMERS")
+st.title("AI FOR GAMERS")
 
 command = st.chat_input("how can I help you?")
 
